@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee85173e6ff74617218f8dbc1ec1008c",
+    "revision": "73b3f2a668d3e12aece2517e4ced0820",
     "url": "thesydneygardener.com.au/index.html"
   },
   {
-    "revision": "a305ed8c5b362d56b88f",
+    "revision": "01d025cee244543f242a",
     "url": "thesydneygardener.com.au/static/css/main.86c2e3a9.chunk.css"
   },
   {
-    "revision": "df0295387cffb81dc37a",
-    "url": "thesydneygardener.com.au/static/js/2.3b06d83c.chunk.js"
+    "revision": "7509b4ef0e10cf43c4ee",
+    "url": "thesydneygardener.com.au/static/js/2.1d5baa30.chunk.js"
   },
   {
-    "revision": "a305ed8c5b362d56b88f",
-    "url": "thesydneygardener.com.au/static/js/main.d7d0c8c8.chunk.js"
+    "revision": "01d025cee244543f242a",
+    "url": "thesydneygardener.com.au/static/js/main.e4757267.chunk.js"
   },
   {
     "revision": "5590eebdf450c9c26f36",
