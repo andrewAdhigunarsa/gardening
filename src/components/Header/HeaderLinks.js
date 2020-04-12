@@ -25,31 +25,31 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
         <ListItem className={classes.listItem}>
-            <Button
+            <Link
                 color="transparent"
-                href="/contact-us"
+                to="/contact-us"
                 className={classes.navLink}
             >
                 Contact us
-            </Button>
+            </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-            <Button
+            <Link
                 color="transparent"
-                href="/"
+                to="/"
                 className={classes.navLink}
             >
                 Home
-            </Button>
+            </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-            <Button
+            <Link
                 color="transparent"
-                href="/about-us"
+                to="/about-us"
                 className={classes.navLink}
             >
                 About us
-            </Button>
+            </Link>
         </ListItem>
       <ListItem className={classes.listItem}>
         <CustomDropdown
