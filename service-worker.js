@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "thesydneygardener.com.au/precache-manifest.2f629499e95302b0ff79649bd35bb7f7.js"
+  "thesydneygardener.com.au/precache-manifest.f54aa48e7c40578b50c4ad9c1e630942.js"
 );
 
 self.addEventListener('message', (event) => {
