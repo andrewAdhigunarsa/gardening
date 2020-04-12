@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3eebf8ce27a9565aa382cfeadb3897ac",
+    "revision": "c0a4e49ebf773a02f8067f42da0092c0",
     "url": "/index.html"
   },
   {
-    "revision": "01d025cee244543f242a",
+    "revision": "bb983633b0c5843fd0f7",
     "url": "/static/css/main.86c2e3a9.chunk.css"
   },
   {
-    "revision": "7509b4ef0e10cf43c4ee",
-    "url": "/static/js/2.1d5baa30.chunk.js"
+    "revision": "614a53262d35c9aadd1c",
+    "url": "/static/js/2.0db32ccb.chunk.js"
   },
   {
-    "revision": "01d025cee244543f242a",
-    "url": "/static/js/main.e4757267.chunk.js"
+    "revision": "bb983633b0c5843fd0f7",
+    "url": "/static/js/main.f32ba86f.chunk.js"
   },
   {
     "revision": "952440815cdcca1955ca",
@@ -60,6 +60,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cynthia-del-rio.9813593c.jpg"
   },
   {
+    "revision": "c5b3c4ecf59fee61201c3bbb91273989",
+    "url": "/static/media/household.c5b3c4ec.svg"
+  },
+  {
     "revision": "e0508cc923eb0b5e68ca6783c53d0f1d",
     "url": "/static/media/kendall.e0508cc9.jpg"
   },
@@ -74,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "10401a829768262544520324b554630f",
     "url": "/static/media/lawn-blur.10401a82.jpg"
+  },
+  {
+    "revision": "ab68326742b81171cb37f1466d37e537",
+    "url": "/static/media/lawn-mower.ab683267.svg"
   },
   {
     "revision": "cc64c0da7e3900ac7f42078beb79d1b5",
@@ -94,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "090a5aabae505f67ee0981613d02ee05",
     "url": "/static/media/profile.090a5aab.jpg"
+  },
+  {
+    "revision": "ac424b205fbca872ea4a9501d3fd5bfd",
+    "url": "/static/media/pruning-shears.ac424b20.svg"
   },
   {
     "revision": "cf8b686b294041d0925f4e745b1fabb9",
@@ -118,5 +130,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ef5c30ea69b7ad740ee6221782c73741",
     "url": "/static/media/studio-5.ef5c30ea.jpg"
+  },
+  {
+    "revision": "0779d8f7f5c06bce3b8dcc77f482daaf",
+    "url": "/static/media/watering-can.0779d8f7.svg"
   }
 ]);
