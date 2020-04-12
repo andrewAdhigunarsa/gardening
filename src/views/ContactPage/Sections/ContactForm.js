@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import { Snackbar } from '@material-ui/core';
+import { Alert } from "@material-ui/lab";
+import { withRouter } from 'react-router-dom';
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -24,27 +27,63 @@ import {TextField} from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 
-export default function ContactForm() {
-
+function ContactForm({history}) {
     const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
     setTimeout(function() {
         setCardAnimation("");
     }, 700);
     const classes = useStyles();
+    const [userName,setUserName]= useState('');
+    const [userEmail,setUserEmail]= useState('');
+    const [userMessage,setUserMessage]= useState('');
+    const [alertOpen,setAlertOpen]= useState(false);
+    const [alertObject, setAlertObject]= useState({
+        message:'This is a success message!',
+        type:'success'
+    });
+
+    useEffect(()=> emailjs.init("user_y6S4Mel3oZRuqVXEnXP6G"),
+        [])
+
+    function handleClose() {
+        setAlertOpen(false);
+    }
 
     function sendEmail(e) {
         e.preventDefault();
 
         var template_params = {
-            "reply_to": "reply_to_value",
-            "from_name": "from_name_value",
-            "to_name": "to_name_value",
-            "message_html": "message_html_value"
+            "reply_to": "thesydneygardener@gmail.com",
+            "from_name": userName+"("+userEmail+")",
+            "to_name": "Admin",
+            "message_html": userMessage
         }
 
         var service_id = "gmail";
         var template_id = "template_nBPVOlal";
-        emailjs.send(service_id, template_id, template_params);
+        emailjs.send(service_id, template_id, template_params)
+            .then((res)=>{
+                console.log(res);
+                if(res.status === '200'){
+                    setAlertOpen(true);
+                    setAlertObject({
+                        message:'Message successfully submitted!',
+                        type:'success'
+                    });
+                    setTimeout(()=>history.push('/'),1000)
+                }
+                setAlertOpen(true);
+                setAlertObject({
+                    message:res.text,
+                    type:'info'
+                });
+            }).catch((e)=>{
+            setAlertOpen(true);
+            setAlertObject({
+                message:e,
+                type:'error'
+            })
+        })
     }
 
     return (
@@ -61,7 +100,7 @@ export default function ContactForm() {
                             <CardBody>
                                 <CustomInput
                                     labelText="First Name..."
-                                    id="first"
+                                    id="user_name"
                                     type="text"
                                     name="user_name"
                                     formControlProps={{
@@ -70,6 +109,8 @@ export default function ContactForm() {
                                     inputProps={{
                                         type: "text",
                                         name: "user_name",
+                                        value: userName,
+                                        onChange: (e) => setUserName(e.target.value),
                                         endAdornment: (
                                             <InputAdornment position="end">
                                                 <People className={classes.inputIconsColor} />
@@ -79,13 +120,15 @@ export default function ContactForm() {
                                 />
                                 <CustomInput
                                     labelText="Email..."
-                                    id="email"
+                                    id="user_email"
                                     formControlProps={{
                                         fullWidth: true
                                     }}
                                     inputProps={{
                                         type: "email",
                                         name: "user_email",
+                                        value: userEmail,
+                                        onChange: (e) => setUserEmail(e.target.value),
                                         endAdornment: (
                                             <InputAdornment position="end">
                                                 <Email className={classes.inputIconsColor} />
@@ -100,6 +143,8 @@ export default function ContactForm() {
                                     fullWidth={true}
                                     multiline
                                     rowsMax="4"
+                                    value={userMessage}
+                                    onChange={(e) => setUserMessage(e.target.value)}
                                 />
                             </CardBody>
                             <CardFooter className={classes.cardFooter}>
@@ -109,8 +154,15 @@ export default function ContactForm() {
                             </CardFooter>
                         </form>
                     </Card>
+                    <Snackbar open={alertOpen} autoHideDuration={6000} onClose={handleClose}>
+                        <Alert onClose={handleClose} severity={alertObject.type}>
+                            {alertObject.message}
+                        </Alert>
+                    </Snackbar>
                 </GridItem>
             </GridContainer>
 
     );
 }
+
+export default withRouter(ContactForm);

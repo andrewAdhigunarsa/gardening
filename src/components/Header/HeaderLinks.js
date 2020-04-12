@@ -25,6 +25,11 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
         <ListItem className={classes.listItem}>
+            <a href={'tel:0402218975'} className={classes.navLink}>
+                0402 218 975
+            </a>
+        </ListItem>
+        <ListItem className={classes.listItem}>
             <Link
                 color="transparent"
                 to="/contact-us"
@@ -42,37 +47,37 @@ export default function HeaderLinks(props) {
                 Home
             </Link>
         </ListItem>
-        <ListItem className={classes.listItem}>
-            <Link
-                color="transparent"
-                to="/about-us"
-                className={classes.navLink}
-            >
-                About us
-            </Link>
-        </ListItem>
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Our Services"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/all" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-              href="/about"
-              className={classes.dropdownLink}
-            >
-              About us
-            </a>
-          ]}
-        />
-      </ListItem>
+        {/*<ListItem className={classes.listItem}>*/}
+        {/*    <Link*/}
+        {/*        color="transparent"*/}
+        {/*        to="/about-us"*/}
+        {/*        className={classes.navLink}*/}
+        {/*    >*/}
+        {/*        About us*/}
+        {/*    </Link>*/}
+        {/*</ListItem>*/}
+      {/*<ListItem className={classes.listItem}>*/}
+      {/*  <CustomDropdown*/}
+      {/*    noLiPadding*/}
+      {/*    buttonText="Our Services"*/}
+      {/*    buttonProps={{*/}
+      {/*      className: classes.navLink,*/}
+      {/*      color: "transparent"*/}
+      {/*    }}*/}
+      {/*    buttonIcon={Apps}*/}
+      {/*    dropdownList={[*/}
+      {/*      <Link to="/all" className={classes.dropdownLink}>*/}
+      {/*        All components*/}
+      {/*      </Link>,*/}
+      {/*      <a*/}
+      {/*        href="/about"*/}
+      {/*        className={classes.dropdownLink}*/}
+      {/*      >*/}
+      {/*        About us*/}
+      {/*      </a>*/}
+      {/*    ]}*/}
+      {/*  />*/}
+      {/*</ListItem>*/}
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"

@@ -13,6 +13,9 @@ import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
 import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
+import ServicesSection from "./Sections/ServicesSection";
+import ContactForm from "../ContactPage/Sections/ContactForm";
+import Divider from "@material-ui/core/Divider";
 // Sections for this page
 
 
@@ -34,7 +37,7 @@ export default function HomePage(props) {
                 rightLinks={<HeaderLinks />}
                 fixed
                 changeColorOnScroll={{
-                    height: 400,
+                    height: 100,
                     color: "white"
                 }}
                 {...rest}
@@ -45,25 +48,28 @@ export default function HomePage(props) {
                         <GridItem xs={12} sm={12} md={6}>
                             <h1 className={classes.title}>Your Garden Story Starts With Us.</h1>
                             <h4>
-                                Every garden needs tender loving care, when you treat your garden with Love it will flourish.
+                                Every garden needs tender loving care, treat your garden with Love.
                             </h4>
                             <br />
                             <Button
                                 color="danger"
                                 size="lg"
-                                target="_blank"
+                                href={'tel:0402218975'}
                                 rel="noopener noreferrer"
                             >
-                                Contact us
+                                 Call 0402 218 975
                             </Button>
                         </GridItem>
                     </GridContainer>
                 </div>
             </Parallax>
-                <div className={classes.container}>
-                    testing
-
-                </div>
+            <ServicesSection />
+            <Divider />
+            <div className={classes.container}>
+                <br/>
+                <br/>
+                <ContactForm />
+            </div>
             <Footer />
         </div>
     );
